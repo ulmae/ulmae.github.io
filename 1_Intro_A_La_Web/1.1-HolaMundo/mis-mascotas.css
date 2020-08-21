@@ -1,0 +1,104 @@
+body {
+    /*Para que la fuente de la página sea Arial*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+section {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 35px;
+}
+p {
+    text-align: justify;
+}
+h2 {
+    background-color: midnightblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 150%;
+    font-weight: lighter;
+    background-image: linear-gradient(to right,midnightblue,rgb(226, 226, 255));
+}
+.navigation {
+    background-color: midnightblue;
+    height: 50px;
+    width: 100%;
+    display: block;
+    /*Esto último es para hacer que el elemento llegue a la orilla de la pantalla*/
+    left:0;
+    right:0;
+    top:0;
+    overflow: hidden;
+    position: fixed; /*Using fixed so this bar remains on top when user scrolls down*/
+    z-index: 2; /*To avoid overlays*/
+}
+.behind-navigation {
+    height: 500px;
+    display: block;
+    left:0;
+    right:0;
+    top:0;
+    overflow: hidden;
+    position: absolute; /* Other values for this property: static relative fixed absolute sticky*/
+    background-image: url(pictures/mis-perros/bebes.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.behind-navigation-2 {
+    height: 500px;
+}
+.header-background {
+    background-color: rgba(202, 202, 202, 0.2);
+    height: 500px;
+    display: block;
+    left:0;
+    right:0;
+    top:0;
+    overflow: hidden;
+    position: absolute; /* Other values for this property: static relative fixed absolute sticky*/
+    background-size: cover;
+    background-position: center center;
+}
+.header-h1 {
+    display: block;
+    /*border: double white 1px;*/
+    border-style: double;
+    border-color: black;
+    border-width: 6px;
+    /* Reference border-style property values: https://www.w3schools.com/css/css_border.asp */
+    margin-top: 200px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 35px;
+    /* background-color: rgba(red, green, blue, alpha); donde "alpha" establece la opacidad*/
+    color: black;
+}
+.home {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(202, 202, 202, 0.2);
+    background-image:url(pictures/home.png);
+    background-size:30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.navigation-button-2 {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0px;
+    border: 0px;
+    color: white;
+    margin-top: 15px;
+    font-size: large;
+    color: rgb(255, 255, 255,0.7);
+    font-weight: bold;
+}

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+li {
+    padding-top: 10px;
+}
+.home {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(202, 202, 202, 0.2);
+    background-image:url(pictures/home.png);
+    background-size:30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.navigation-button-2 {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0px;
+    border: 0px;
+    color: white;
+    margin-top: 15px;
+    font-size: large;
+    color: rgb(255, 255, 255,0.7);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navigation {
+    background-color: darkorchid;
+    height: 50px;
+    width: 100%;
+    display: block;
+    /*Esto último es para hacer que el elemento llegue a la orilla de la pantalla*/
+    left:0;
+    right:0;
+    top:0;
+    overflow: hidden;
+    position: fixed; /*Using fixed so this bar remains on top when user scrolls down*/
+    z-index: 2;
+}
+.behind-navigation-2 {
+    height: 70px;
+}

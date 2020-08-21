@@ -1,0 +1,43 @@
+main {
+    width: 33vw;
+    height: 24vw;
+    border: 5px solid black;
+    position: absolute;
+}
+.flag {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.row1 {
+    background-color: #EF2B2D;
+    height: 37.5%;
+    width: 100%;
+}
+.row2 {
+    background-color: #FFFFFF;
+    height: 6.25%;
+    width: 100%;
+}
+.row3 {
+    background-color: #002868;
+    height: 12.5%;
+    width: 100%;
+}
+.columna-blanca {
+    background-color: #FFFFFF;
+    margin-left: 27.27%;
+    width: 18.18%;
+    height: 100%;
+}
+.franja-azul {
+    background-color: #002868;
+    width: 9.09%;
+    height: 100%;
+    left: 31.81%;
+    top: 0px;
+    position: absolute;
+    z-index: 1;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--HTML tags used:
+html
+head
+meta
+link
+title
+body
+header
+h1
+section
+div
+h2
+nav
+ul
+li
+span
+a
+main
+article
+h3
+p
+b
+i
+details
+summary
+mark
+aside
+footer
+small-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ulma Escobar">
+    <link rel="stylesheet" href="concepts.css">
+    <title>DNS Concepts</title>
+</head>
+<body>
+    <header>
+        <h1>DNS</h1>
+    </header>
+    <section>
+        <div class="banner">
+            <h2>DNS Concepts</h2>
+        </div>
+    </section>
+    <nav>
+        <ul>
+            <a href="./../../../index.html"><li>Home</li></a><span> > </span>
+            <a href="./../../index.html"><li>Articles</li></a><span> > </span>
+            <a href="./../index.html"><li>Web</li></a><span> > </span>
+            <a href="./index.html"><li>DNS</li></a><span> > </span>
+            <li>DNS Concepts</li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <section id="concept">
+                <h3>What is DNS?</h3>
+                <p>DNS stands for <b>Domain Name System.</b> This system is a database that translates a web address into the physical IP address of the computer hosting that site.
+                In that sense, it will serve as a phonebook, relating domains with their respective address. It also serves to control the settings of your domain through DNS records.</p>
+            </section>
+            <section id="DNSrecords">
+                <h3>DNS Records</h3>
+                <p>DNS records are basically mapping files that tell the DNS server which IP address each domain is associated with, and how to handle requests sent to each domain.</p>
+                <br>
+                <p>When someone visits a website, a request is sent to the DNS server and the forwarded to the web server provided by a web hosting company, which contains the data from the website. Then, DNS records will tell the web server how to respond to your input.</p>
+                <br>
+                <p>The types of information elements in your DNS are categorized and organized with a list of DNS record types, the <b>resource records.</b> Each record has a type, an expiration time, a class, and type-specific data. The time that changes to your DNS records take to <i>propagate</i> through the Internet will depend on the expiration time, also called <b>Time To Live (TTL).</b> You can modify these values through your domain host.</p>
+            </section>
+            <section id="recordtypes">
+                <h3>DNS record types</h3>
+                <p>There's a number of different DNS records, but the most commonly used are:</p>
+                <br>
+                <details id="A">
+                    <summary>A</summary>
+                    <p>Also known as an <b>Address record</b>, or host record. It returns a 32 bit IPv4 Address of the computer hosting that domain's services or web host. </p>
+                </details>
+                <details id="AAAA">
+                    <summary>AAAA</summary>
+                    <p>An <b>AAAA record</b> is similar to the A record, but it allows you to point the domain to an IPv6 address, which is the most recent version of the Internet Protocol.</p>
+                </details>
+                <details id="MX">
+                    <summary>MX</summary>
+                    <p><b>Mail Exchange</b> records direct a domain's email to the servers hosting the domain's user accounts. Multiple MX records can be defined for a domain, each with a different priority for <mark>redundancy</mark> purposes. When multiple MX records are defined, if mail can't be delivered using the highest priority record, the second priority record is used, and so on.</p>
+                    <br>
+                    <!--Want to style as a box-->
+                    <aside>Server redundancy defines the ability of a computing infrastructure to provide additional servers that may be deployed on runtime for backup, load balancing or halting a primary server for maintenance purposes.</aside>
+                </details>
+                <details id="TXT">
+                    <summary>TXT</summary>
+                    <p>A <b>text record</b> provides text information to sources outside your domain that can be used for a number of arbitrary purposes. The record's value can either be human or machine-readable text.</p>
+                </details>
+                <details id="NS">
+                    <summary>NS</summary>
+                    <p><b>Name server</b>  records determine which servers will communicate DNS information for a domain, so they should point to your domain host. A name server is a specialized server on the Internet that handles queries or questions from your local computer, about the location of a domain name's various services.</p>
+                </details>
+                <details id="CNAME">
+                    <summary>CNAME</summary>
+                    <p>A <b>Canonical Name</b> record links an alias name to another true or canonical domain name. They are stored with a pair of values: the alias you're creating the record for and the domain the alias should point to.</p>
+                    <br>
+                    <p>In this way, CNAME records make it easy to run multiple services from one IP Address with the use of subdomains.</p>
+                </details>
+            </section>
+            <section id="propagation">
+                <h3>DNS Propagation</h3>
+                <p>When you update your name servers for a domain, it may take up to 24 to 72 hours for the change to take effect. This period is called DNS propagation.</p>
+                <br>
+                <p>In other words, it is a period of time that Internet service provider (ISP) nodes across the world take to update their caches with the new DNS information of your domain.</p>
+                <br>
+                <p>Due to DNS caches of different levels, after the name servers change, some of your visitor might still be redirected to your old server for some time, whereas other can see the website or service from the new server shortly after the change. Each of the ISP nodes checks its own cache to see if it contains the DNS information of the domain. If it is not there, it looks it up and saves it in order to speed up the loading next time and to reduce the traffic.</p>
+                <br>
+                <p>That is why the new name servers will not propagate immediately – ISPs have different cache refreshing intervals, so some of them will still have the old DNS information in memory.</p>
+            </section>
+        </article>
+        <footer style="text-align: right; margin-top: 2%;">
+            <small>
+                &copy; Ulma Escobar
+            </small>
+        </footer>
+    </main>
+<!--Añadir sources:
+https://support.google.com/cloudidentity/answer/48090
+https://support.cloudstore.dell.com/articles/office-365/set-up-domain/2-8-dns-records-explained
+https://en.wikipedia.org/wiki/Domain_Name_System
+https://www.namecheap.com/support/knowledgebase/article.aspx/9622/10/dns-propagation--explained
+-->
+</body>
+</html>

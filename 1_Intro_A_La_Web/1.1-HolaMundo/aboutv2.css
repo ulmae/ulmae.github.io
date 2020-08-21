@@ -1,0 +1,130 @@
+body {
+    background-color: #E9C2E9;
+    background-image: linear-gradient(to bottom right,#e4b4e4,#ccffff)
+}
+h1 {
+    color:mediumorchid;
+    text-align: center;
+}
+h2{
+    color: darkorchid;
+    text-align: center;
+}
+h3{
+    color: darkorchid;
+    text-align: center;
+}
+h4{
+    color:darkorchid;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+ol {
+    text-align: center;
+    list-style-position: inside;
+    padding-inline-start: 0px
+}
+ul {
+    text-align: center;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+.home {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(202, 202, 202, 0.2);
+    background-image:url(pictures/home.png);
+    background-size:30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.navigation-button-2 {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0px;
+    border: 0px;
+    color: white;
+    margin-top: 15px;
+    font-size: large;
+    color: rgb(255, 255, 255,0.7);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navigation {
+    background-color: darkorchid;
+    height: 50px;
+    width: 100%;
+    display: block;
+    /*Esto último es para hacer que el elemento llegue a la orilla de la pantalla*/
+    left:0;
+    right:0;
+    top:0;
+    overflow: hidden;
+    position: fixed; /*Using fixed so this bar remains on top when user scrolls down*/
+    z-index: 2;
+}
+.behind-navigation-2 {
+    height: 70px;
+}
+.last-title {
+    color:mediumorchid;
+    text-align: center;
+}
+.div-fondo1{
+    height: 3px;
+    background-color: darkorchid;
+}
+.div-fondo2{
+    height: 2px;
+    opacity: 0.0;
+}
+.centered-element{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+.profile-picture {
+    text-align: center;
+}
+.profile-picture img {
+    width: 300px;
+}
+.image-in-table{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+      border-radius: 7%;
+      max-height: 200px;
+      max-width: 100%;
+      margin:auto;
+  }
+.table-of-images {
+    border-radius: 2%;
+    background-color:lightslategrey;
+    margin: auto;
+    padding:5px;
+}
+.image-in-table:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+.social-icon {
+    max-width: 4%;
+}
+/* Para que haga esto solo en pantallas pequeñas*/
+@media only screen and (max-width: 600px) {
+    .image-in-table{
+        filter: none;
+        -webkit-filter: grayscale(0%);
+          border-radius: 7%;
+          max-height: 200px;
+          max-width: 100%;
+          margin:auto
+      }
+      .profile-picture img {
+        width: 50%;
+    }
+  }
+  
