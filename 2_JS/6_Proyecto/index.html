@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <title>Mini Proyecto: Javascript</title>
+</head>
+<body style="background-color: mintcream;">
+    <h1 style="background-color: midnightblue;; color: mintcream; padding: 5px;">Mini Proyecto: JavaScript</h1>
+    <p>Crea una aplicación web con JavaScript donde simulemos la interacción con un cajero automático.</p>
+    <p>Al ingresar al cajero, puedes seleccionar la cuenta con la que deseas interactuar. Deben existir al menos tres cuentas: ‘Mali’ - ‘Gera’ - ’Maui</p>
+    <p>Para esto, puedes trabajar con un arreglo de objetos como el siguiente:</p>
+    <code style="background-color:lightgrey;" >var cuentas = [
+        { nombre: "Mali", saldo: 200, password: 'helloworld' },
+        { nombre: "Gera", saldo: 290, password: 'l33t' },
+        { nombre: "Maui", saldo: 67, password: '123' },
+      ];</code>
+    <p>Al seleccionar una cuenta, debes ingresar el password asociado a la cuenta. Si el password es incorrecto, debes notificar al usuario y permitirle intentarlo nuevamente. Si el password es correcto, debes mostrar las siguientes opciones:</p>
+    <ol>
+        <li>Consultar saldo</li>
+        <li>Ingresar monto</li>
+        <li>Retirar monto</li>
+    </ol>
+    <ol>
+        <li>Al seleccionar consultar saldo, debe mostrar en pantalla el saldo actual de la cuenta</li>
+        <li>Al seleccionar ingresar monto, el usuario debe escribir el monto a ingresar. Al ingresar el monto, debe mostrarle al usuario el monto ingresado y el nuevo saldo total.</li>
+        <li>Al seleccionar retirar monto, el usuario debe escribir el monto a retirar. Al retirar el monto, debe mostrarle al usuario el monto retirado y el nuevo saldo total.</li>
+    </ol>
+    <p>Como regla de negocio, una cuenta no debe de tener más de $990 y menos de $10. Es necesario hacer las validaciones pertinentes en tu código para que no se rompa esta regla de negocio.</p>
+</body>
+</html>
