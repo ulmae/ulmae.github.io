@@ -157,7 +157,6 @@ if (cuentaActual === null) {
                 };
             };
         };
-        document.getElementById("resultadoDeOperacion").style.visibility = "visible";
         // Llega a este punto despues de cancelar o ver que la contraseña es correcta
         if (comprobarPassword(passwordIngresada) !== true) {
             noPermitido();
