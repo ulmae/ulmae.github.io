@@ -25,7 +25,7 @@ function mapear(nombreCuenta) {
         if (nombreCuenta === cuentas[i].nombre) {
             var indice = i;
         };
-    }
+    };
     return indice
 };
 
