@@ -1,4 +1,3 @@
-'use strict';
 /*
 ---------------
 Lista de funciones en los botones:
@@ -16,20 +15,6 @@ Lista de pantallas:
 htmlInicio
 htmlOperaciones
 htmlRespuesta
----------------
-Explicacion de crearCuenta()
-
-Al hacer click en el boton:
-1. Prompt pide el nombre de usuario
-    1.1 si es texto (=no se cancelo), pasar a 1.2
-    1.2 - si ya existe, mostrar alerta y volver a 1
-        - si no existe, seguir a 2
-2. Prompt pide la contraseña
-    - si es texto, pasar a 3
-3. Prompt pide el saldo inicial
-    - si es un numero, pasar a 4
-    - si es NaN, volver a 3
-4. Alerta muestra que la cuenta fue creada. Muestra el nombre, la password y el saldo. El nuevo objeto se almacena en el array
 ---------------
 */
 
@@ -56,7 +41,7 @@ var htmlRespuesta = '<p id="texto"></p><button onclick="operaciones()">Volver</b
 function operaciones() {
     document.getElementById("cajero").innerHTML = htmlOperaciones;
 };
-function login() { // Done
+function login() { 
     var nombreCuenta;
     for (var i = 0; i < cuentas.length; i++) {
         // Cuando el loop acaba de iniciar o reinicia, pedir el nombre de usuario
@@ -96,7 +81,7 @@ function login() { // Done
         };
     };
 };
-function crearCuenta() { // Done
+function crearCuenta() { 
     var existe = true;
     while (existe !== false) {
         var ccNombre = prompt("Ingrese el nombre de usuario que desea utilizar:");
@@ -199,7 +184,21 @@ function salir() {
     document.getElementById("cajero").innerHTML = htmlInicio;
 };
 // END Funciones de los botones
-
-
+/*
+//-------------------------------------------
+Nota: Explicacion de crearCuenta()
+//-------------------------------------------
+Al hacer click en el boton:
+1. Prompt pide el nombre de usuario
+    1.1 si es texto (=no se cancelo), pasar a 1.2
+    1.2 - si ya existe, mostrar alerta y volver a 1
+        - si no existe, seguir a 2
+2. Prompt pide la contraseña
+    - si es texto, pasar a 3
+3. Prompt pide el saldo inicial
+    - si es un numero, pasar a 4
+    - si es NaN, volver a 3
+4. Alerta muestra que la cuenta fue creada. Muestra el nombre, la password y el saldo. El nuevo objeto se almacena en el array
+*/
 
 
