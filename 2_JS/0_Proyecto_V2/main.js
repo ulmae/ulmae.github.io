@@ -2,13 +2,13 @@
 ---------------
 Lista de funciones en los botones:
 
-operaciones()
-login()
-consultarDisponible()
-ingresar()
-retirar()
-salir()
-crearCuenta()
+Volver --> operaciones()
+Iniciar sesión --> login()
+Consultar saldo --> consultarDisponible()
+Ingresar monto --> ingresar()
+Retirar monto --> retirar()
+Salir --> salir()
+Crea cuenta --> crearCuenta()
 ---------------
 Lista de pantallas:
 
@@ -147,7 +147,7 @@ function ingresar() {
         } else {
             var nuevoSaldo = monto + saldoActual
             if (nuevoSaldo>990) {
-                alert("Su saldo actual es de <b>$"+saldoActual+"</b>, al ingresar <b>$"+monto+ "</b> se superaría el máximo de <b>$990</b>. La operación no es permitida.");
+                alert("Su saldo actual es de $"+saldoActual+", al ingresar $"+monto+ " se superaría el máximo de $990. La operación no es permitida.");
             } else {
                 var textToShow = ("El monto ingresado es de <b>$"+monto+"</b>. Su nuevo saldo es de <b>$"+nuevoSaldo+"</b>.");
                 cuentas[indice].saldo =  nuevoSaldo;
@@ -169,7 +169,7 @@ function retirar() {
         } else {
             var nuevoSaldo = saldoActual - monto;
             if (nuevoSaldo<10) {
-                alert("Su saldo actual es de <b>$"+saldoActual+"</b>. Al retirar <b>$"+monto+ "</b> la cuenta tendría menos de  <b>$10</b>. La operación no es permitida.");
+                alert("Su saldo actual es de $"+saldoActual+". Al retirar $"+monto+ " la cuenta tendría menos de  $10. La operación no es permitida.");
             } else {
                 var textToShow = ("El monto ingresado es de <b>$"+monto+"</b>. Su nuevo saldo es de <b>$"+nuevoSaldo+"</b>.");
                 cuentas[indice].saldo =  nuevoSaldo;
