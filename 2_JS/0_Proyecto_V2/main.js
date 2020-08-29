@@ -44,9 +44,9 @@ var indice = -1;
 // START Variables con las "pantallas" en HTML
 
 // Ingresar/Crear cuenta
-var htmlInicio = '<button onclick="login()">Iniciar sesión</button><button onclick="crearCuenta()">Crear cuenta</button>';
+var htmlInicio = '<button onclick="login()">Iniciar sesión</button> <button onclick="crearCuenta()">Crear cuenta</button>';
 // Consultar/Ingresar/Retirar/Salir
-var htmlOperaciones = '<p>Elija la operación a realizar:</p><button onclick="consultarDisponible()">Consultar saldo</button><button onclick="ingresar()">Ingresar monto</button><button onclick="retirar()">Retirar monto</button><button onclick="salir()">Salir</button>';
+var htmlOperaciones = '<p>Elija la operación a realizar:</p><button onclick="consultarDisponible()">Consultar saldo</button> <button onclick="ingresar()">Ingresar monto</button> <button onclick="retirar()">Retirar monto</button> <button onclick="salir()">Salir</button>';
 // Resultado / Volver
 var htmlRespuesta = '<p id="texto"></p><button onclick="operaciones()">Volver</button>';
 // 
