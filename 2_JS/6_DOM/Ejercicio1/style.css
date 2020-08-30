@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+}
+body {
+    margin-top:20px;
+    width: 80vw;
+    margin-left:10vw;
+    text-align: center;
+    background-color: #99d5c96b;
+}
+h1 {
+    background-color: #d5999f;
+    color: #1b1414;
+    padding: 20px;
+}
+p {
+    background-color: #d5b499;
+    padding: 20px;
+    margin: 10px 0px 0px;
+}
+section img {
+    width: 100%;
+    margin: 10px 0px;
+}
