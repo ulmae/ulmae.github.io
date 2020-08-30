@@ -3,8 +3,9 @@
 }
 body {
     margin-top:20px;
-    width: 80vw;
-    margin-left:10vw;
+    width: 50vw;
+    height: 100vh;
+    margin-left:25vw;
     text-align: center;
     background-color: #99d5c96b;
 }
@@ -20,5 +21,6 @@ p {
 }
 section img {
     width: 100%;
-    margin: 10px 0px;
+    margin: 10px auto;
+    display: block;
 }
