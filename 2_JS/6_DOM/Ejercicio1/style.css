@@ -3,9 +3,9 @@
 }
 body {
     margin-top:20px;
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
-    margin-left:25vw;
+    margin-left:20vw;
     text-align: center;
     background-color: #99d5c96b;
 }
@@ -23,4 +23,7 @@ section img {
     width: 100%;
     margin: 10px auto;
     display: block;
+}
+section {
+    margin-bottom: 10px;
 }
