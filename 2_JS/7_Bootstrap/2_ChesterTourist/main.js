@@ -3,6 +3,7 @@ function crearTarjeta(hotel) {
     // Tarjeta
     var card = document.createElement('div');
     card.className = "card mb-3 w-100"
+    card.id = hotel.firstLetter
 
     // Contenedor
     var cardContainer = document.getElementById('hotel-cards');
@@ -39,7 +40,6 @@ function crearTarjeta(hotel) {
     var heading = document.createElement('h4');
     heading.className = "card-title pb-2";
     heading.innerHTML = hotel.hotelName;
-    heading.id = hotel.firstLetter;
     cardBody.appendChild(heading);
 
     //Separador (insert)
