@@ -20,9 +20,9 @@ function crearTarjeta(hotel) {
 
     //img
     var img = document.createElement('img');
-    img.src = "https://www.chester-hotel.com/assets/Uploads/9b9f3b573e/house-homepage__FocusFillWzgwMCw4MDAsZmFsc2UsMF0.jpg";
+    img.src = hotel.picture;
     img.className = "card-img";
-    img.alt = "Abode Chester";
+    img.alt = hotel.hotelName;
     imgDiv.appendChild(img);
 
     //TextContainer
@@ -38,7 +38,8 @@ function crearTarjeta(hotel) {
     //heading
     var heading = document.createElement('h4');
     heading.className = "card-title pb-2";
-    heading.innerHTML = "Abode Chester";
+    heading.innerHTML = hotel.hotelName;
+    heading.id = hotel.firstLetter;
     cardBody.appendChild(heading);
 
     //Separador (insert)
@@ -59,7 +60,7 @@ function crearTarjeta(hotel) {
     // Location
     var locationText = document.createElement('p');
     locationText.className = "card-text ml-4";
-    locationText.innerHTML = "Grosvenor Road Chester";
+    locationText.innerHTML = hotel.hotelLocation;
     cardBody.appendChild(locationText);
 
     // Separador (insert)
@@ -69,12 +70,12 @@ function crearTarjeta(hotel) {
     //hotelInfo
     var hotelInfo = document.createElement('p');
     hotelInfo.className = "card-text py-2 text-justify";
-    hotelInfo.innerHTML = "Brand new modern hotel situated just outside the main shopping streets of Chester overlooking Chester Racecourse. This circular glass panelled hotel boasts its own underground car park cafe bar and restaurant. About a ten minute walk to Chester Cross at the centre of Chester.";
+    hotelInfo.innerHTML = hotel.description;
     cardBody.appendChild(hotelInfo);
 
     //buttonInformation
     var buttonInformation = document.createElement('a');
-    buttonInformation.href = "https://www.booking.com/hotel/gb/abode-chester.en.html?aid=1848180&no_rooms=1&group_adults=2";
+    buttonInformation.href = hotel.moreInfo;
     buttonInformation.className = "btn btn-secondary";
     buttonInformation.innerHTML = "More Info";
     cardBody.appendChild(buttonInformation);
@@ -82,14 +83,14 @@ function crearTarjeta(hotel) {
 
     //buttonBook
     var buttonBook = document.createElement('a');
-    buttonBook.href = "https://www.booking.com/hotel/gb/abode-chester.en.html?aid=1848180&no_rooms=1&group_adults=2";
+    buttonBook.href = hotel.bookNow;
     buttonBook.className = "btn btn-primary";
     buttonBook.innerHTML = "Book Now";
     cardBody.appendChild(buttonBook);
 };
 
-for (var i=0; i<15; i++) {
-    crearTarjeta();
+for (var i=0; i < hotelData.length ; i++) {
+    crearTarjeta(hotelData[i]);
 };
 
 
