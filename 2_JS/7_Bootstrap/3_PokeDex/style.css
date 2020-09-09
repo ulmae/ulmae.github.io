@@ -9,6 +9,28 @@
     justify-content: center;
     /* background-color: blue; */
 }
-.pokemon-card {
-    background-color: green;
+/*.pokemon-card {
+}*/
+
+.pokemon-name {
+    display: inline-block;
+    border-radius: 0px 2em 2em 0px;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+    background-color: white;
+
+}
+.pokemon-num {
+    display: inline-block;
+    border-radius: 2em 0px 0px 2em;
+    background-color: 	lightgray;
+    border-left: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+
+}
+.tipo-pokemon {
+    border-radius: 1em;
+    font-size: 0.8em;
 }

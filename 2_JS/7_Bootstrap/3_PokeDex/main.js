@@ -1,73 +1,192 @@
-function crearTarjeta() {
+//----------------------------------------------------------
+// Funcion que asocia los tipos de Pokemon con un color hex
+//----------------------------------------------------------
+function mapThemColors(currentType) {
+    var bg;
 
-// Crear la tarjeta
-var card = document.createElement('div');
-card.className = "card text-center pokemon-card";
+    switch (currentType) {
+        case pokemon_colors[0].name:
+            bg = pokemon_colors[0].color;
+            break;
+        case pokemon_colors[1].name:
+            bg = pokemon_colors[1].color;
+            break;
+        case pokemon_colors[2].name:
+            bg = pokemon_colors[2].color;
+            break;
+        case pokemon_colors[3].name:
+            bg = pokemon_colors[3].color;
+            break;
+        case pokemon_colors[4].name:
+            bg = pokemon_colors[4].color;
+            break;
+        case pokemon_colors[5].name:
+            bg = pokemon_colors[5].color;
+            break;
+        case pokemon_colors[6].name:
+            bg = pokemon_colors[6].color;
+            break;
+        case pokemon_colors[7].name:
+            bg = pokemon_colors[7].color;
+            break;
+        case pokemon_colors[8].name:
+            bg = pokemon_colors[8].color;
+            break;
+        case pokemon_colors[9].name:
+            bg = pokemon_colors[9].color;
+            break;
+        case pokemon_colors[10].name:
+            bg = pokemon_colors[10].color;
+            break;
+        case pokemon_colors[11].name:
+            bg = pokemon_colors[11].color;
+            break;
+        case pokemon_colors[12].name:
+            bg = pokemon_colors[12].color;
+            break;
+        case pokemon_colors[13].name:
+            bg = pokemon_colors[13].color;
+            break;
+        case pokemon_colors[14].name:
+            bg = pokemon_colors[14].color;
+            break;
+        case pokemon_colors[15].name:
+            bg = pokemon_colors[15].color;
+            break;
+        case pokemon_colors[16].name:
+            bg = pokemon_colors[16].color;
+            break;
+        case pokemon_colors[17].name:
+            bg = pokemon_colors[17].color;
+            break;
+        case pokemon_colors[18].name:
+            bg = pokemon_colors[18].color;
+            break;
+        default:
+            bg = "000000";
+    };
+    return "#" + bg;
+};
 
-// Ubicar la tarjeta
-var caja = document.getElementById('caja-de-tarjetas');
-caja.appendChild(card);
+//----------------------------------------------------------
+// Funcion que crea las tarjetas de los pokemon a partir
+// del objeto currentPokemon
+//----------------------------------------------------------
+function crearTarjeta(currentPokemon) {
 
-//Imagen
-var imagen = document.createElement('img');
-imagen.className = "card-img-top";
-imagen.alt = "Bulbasaur"; // reemplazar
-imagen.style.maxWidth = "200px";
-imagen.src = "http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png"; // reemplazar
-card.appendChild(imagen);
+    // Crear la tarjeta
+    var card = document.createElement('div');
+    card.className = "card text-center pokemon-card m-2";
 
-//Card Body
-var cardBody = document.createElement('div');
-cardBody.className = "card-body";
-card.appendChild(cardBody);
+    // Ubicar la tarjeta
+    var caja = document.getElementById('caja-de-tarjetas');
+    caja.appendChild(card);
 
-// Nombre
-var nombre = document.createElement('h5');
-nombre.className = "card-title text-center";
-nombre.innerHTML = "#1 Bulbasaur";
-cardBody.appendChild(nombre);
+    //Imagen
+    var imagen = document.createElement('img');
+    imagen.className = "card-img-top p-5";
+    imagen.alt = currentPokemon.name; // reemplazar
+    imagen.style.maxWidth = "230px";
+    imagen.style.backgroundColor = "lightblue";
+    imagen.src = currentPokemon.art_url; // reemplazar
+    card.appendChild(imagen);
 
-//Contenedor Grid
-var contTipo = document.createElement('div');
-contTipo.className = "container";
-cardBody.appendChild(contTipo);
+    //Card Body
+    var cardBody = document.createElement('div');
+    cardBody.className = "card-body p-2 bg-light";
+    card.appendChild(cardBody);
 
-//Row
-var rowTipo = document.createElement('div');
-rowTipo.className = "row";
-contTipo.appendChild(rowTipo);
+    // Nombre
+    var numerito = document.createElement('h6');
+    numerito.className = "card-title text-center mt-1 mb-1 pokemon-num py-1 px-2";
+    numerito.innerHTML = currentPokemon.pkdx_id; //reemplazar
+    cardBody.appendChild(numerito);
 
-//col 1
-var colTipo1 = document.createElement('div');
-colTipo1.className = "col p-0";
-rowTipo.appendChild(colTipo1);
+    var nombre = document.createElement('h6');
+    nombre.className = "card-title text-center mt-1 mb-1 pokemon-name py-1 px-2";
+    nombre.innerHTML = currentPokemon.name; //reemplazar
+    cardBody.appendChild(nombre);
 
-//Col2
-var colTipo2 = document.createElement('div');
-colTipo2.className = "col p-0";
-rowTipo.appendChild(colTipo2);
+    //Contenedor Grid
+    var contTipo = document.createElement('div');
+    contTipo.className = "container";
+    cardBody.appendChild(contTipo);
 
-// Botón 1
-var buttonTipo1 = document.createElement('div');
-buttonTipo1.className = "btn disabled m-1 tipo-pokemon btn-primary";
-buttonTipo1.innerHTML = "Grass"; //reemplazar
-buttonTipo1.style.backgroundColor = "blue";
-colTipo1.appendChild(buttonTipo1);
 
-// Botón 2
-var buttonTipo2 = document.createElement('div');
-buttonTipo2.className = "btn disabled m-1 tipo-pokemon btn-primary";
-buttonTipo2.innerHTML = "Grass"; //reemplazar
-buttonTipo2.style.backgroundColor = "blue";
-colTipo2.appendChild(buttonTipo2);
+    if (currentPokemon.types.length === 2) { //Si es de tipo dual, hacer dos columnas
+
+        //Row
+        var rowTipo = document.createElement('div');
+        rowTipo.className = "row";
+        contTipo.appendChild(rowTipo);
+
+        //col 1
+        var colTipo1 = document.createElement('div');
+        colTipo1.className = "col p-0";
+        rowTipo.appendChild(colTipo1);
+
+        //Col2
+        var colTipo2 = document.createElement('div');
+        colTipo2.className = "col p-0";
+        rowTipo.appendChild(colTipo2);
+
+        // Botón 1
+        var buttonTipo1 = document.createElement('div');
+        buttonTipo1.className = "btn disabled m-1 tipo-pokemon btn-dark p-1";
+        buttonTipo1.innerHTML = currentPokemon.types[0].charAt(0).toUpperCase() + currentPokemon.types[0].slice(1); //reemplazar
+        buttonTipo1.style.backgroundColor = mapThemColors(currentPokemon.types[0]);
+        colTipo1.appendChild(buttonTipo1);
+
+        // Botón 2
+        var buttonTipo2 = document.createElement('div');
+        buttonTipo2.className = "btn disabled m-1 tipo-pokemon btn-dark p-1";
+        buttonTipo2.innerHTML = currentPokemon.types[1].charAt(0).toUpperCase() + currentPokemon.types[1].slice(1); //reemplazar
+        buttonTipo2.style.backgroundColor = mapThemColors(currentPokemon.types[1]);
+        colTipo2.appendChild(buttonTipo2);
+
+    } else { //Si es de un solo tipo, hacer tres columnas
+
+        //Row
+        var rowTipo = document.createElement('div');
+        rowTipo.className = "row";
+        contTipo.appendChild(rowTipo);
+
+        //Col2
+        var colTipo2 = document.createElement('div');
+        colTipo2.className = "col-3 p-0";
+        rowTipo.appendChild(colTipo2);
+
+        //col 1
+        var colTipo1 = document.createElement('div');
+        colTipo1.className = "col-6 p-0";
+        rowTipo.appendChild(colTipo1);
+
+        //Col2
+        var colTipo2 = document.createElement('div');
+        colTipo2.className = "col-3 p-0";
+        rowTipo.appendChild(colTipo2);
+
+        // Botón 1
+        var buttonTipo1 = document.createElement('div');
+        buttonTipo1.className = "btn disabled m-1 tipo-pokemon btn-dark p-1";
+        buttonTipo1.innerHTML = currentPokemon.types[0].charAt(0).toUpperCase() + currentPokemon.types[0].slice(1); //reemplazar
+        buttonTipo1.style.backgroundColor = mapThemColors(currentPokemon.types[0]);
+        colTipo1.appendChild(buttonTipo1);
+
+    };
+
+
 
 };
 
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
-crearTarjeta();
+
+
+//----------------------------------------------------------
+// Corre la funcion crearTarjeta para alimentarla con
+// el "json" que contiene pokemon_data
+//----------------------------------------------------------
+
+
+for (i = 0; i < pokemon_data.length; i++) {
+    crearTarjeta(pokemon_data[i]);
+};
