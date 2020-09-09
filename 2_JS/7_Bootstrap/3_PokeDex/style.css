@@ -7,23 +7,30 @@
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
-    /* background-color: blue; */
 }
-/*.pokemon-card {
-}*/
+
+.pokemon-card {
+    box-shadow: 0 0 0 1px #DFDFDF;
+    border: none;
+    overflow: hidden;
+}
+
+.pokemon-card:hover {
+    box-shadow: 0 0 0 1px #DFDFDF, 0 0 5px 1px #292b2c9a;
+}
 
 .pokemon-name {
     display: inline-block;
-    border-radius: 0px 2em 2em 0px;
+    border-radius: 0px 0.9em 0.9em 0px;
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;
     border-top: 2px solid gray;
-    background-color: white;
+    background-color: #fcfcfc;
 
 }
 .pokemon-num {
     display: inline-block;
-    border-radius: 2em 0px 0px 2em;
+    border-radius: 0.9em 0px 0px 0.9em;
     background-color: 	lightgray;
     border-left: 2px solid gray;
     border-bottom: 2px solid gray;
