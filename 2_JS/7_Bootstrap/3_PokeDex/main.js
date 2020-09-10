@@ -107,6 +107,7 @@ function crearTarjeta(currentPokemon) {
     imagen.className = "card-img-top p-5 pokemon-image";
     imagen.alt = currentPokemon.name; // reemplazar
     imagen.style.maxWidth = "230px";
+    imagen.style.maxHeight = "230px";
     imagen.src = currentPokemon.art_url; // reemplazar
     card.appendChild(imagen);
 
@@ -202,6 +203,7 @@ function crearTarjeta(currentPokemon) {
 
         //Colorear imagen de fondo
         imagen.style.backgroundColor = typeColor1[1];
+        console.log(typeColor1);
 
     };
 
@@ -222,8 +224,8 @@ for (i = 0; i < pokemon_data.length; i++) {
 };
 
 function desaparece() {
-    var goaway = document.getElementById('pokeball');
-    goaway.style.display = "none";
+    var goAway = document.getElementById('pokeball');
+    goAway.style.display = "none";
 };
 
 

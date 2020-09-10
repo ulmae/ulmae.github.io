@@ -9,7 +9,7 @@
     border-right: solid 4px rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     animation-name: loadHideContentLeft;
-    animation-duration: 3s;
+    animation-duration: 3200ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -23,7 +23,7 @@
     border-left: solid 4px rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     animation-name: loadHideContentRight;
-    animation-duration: 3s;
+    animation-duration: 3200ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     
@@ -56,16 +56,18 @@
     z-index: 1000;
 }
 .pokebola {
+    height: 50px;
+    width: 50px;
     overflow: hidden;
     border-radius: 100%;
     position: fixed;
     left: 50%;
-    margin-left: -31px;
+    margin-left: -31.5px;
     top: 50%;
     margin-top: -25px;
     z-index: 1000;
     animation-name: pokeBig;
-    animation-duration: 3s;
+    animation-duration: 2900ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     box-sizing: border-box;
@@ -96,10 +98,10 @@
         transform: scale(1.5,1.5);
     }
     80% {
-        transform: scale(1,1);
+        transform: scale(0.9,0.9);
     }
     90% {
-        transform: scale(0.5,0.5);
+        transform: scale(0.9,0.9);
     }
     100% {
         transform: scale(0,0);
@@ -217,3 +219,11 @@
     font-size: 0.8em;
 }
 
+/*Habia que cambiarlo por el width del scrollbar*/
+
+@media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+    .pokebola {
+      margin-left: -25px;
+    }
+  }
