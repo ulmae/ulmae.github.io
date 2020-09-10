@@ -1,4 +1,14 @@
+//----------------------------------------------------------
+// Inicializar variables
+//----------------------------------------------------------
+
 var caja = document.getElementById('caja-de-tarjetas');
+var modalName = document.getElementById('pokemonModalLabel');
+var modalImg = document.getElementById('modal-img');
+var modalType1 = document.getElementById('type-modal-1');
+var modalType2 = document.getElementById('type-modal-2');
+var modalDescription = document.getElementById('description-modal');
+
 //----------------------------------------------------------
 // Funcion que asocia los tipos de Pokemon con un color hex
 //----------------------------------------------------------
@@ -93,11 +103,23 @@ function mapThemColors(currentType) {
 // Funcion que crea las tarjetas de los pokemon a partir
 // del objeto currentPokemon
 //----------------------------------------------------------
+
 function crearTarjeta(currentPokemon) {
+
+    var attToggle = document.createAttribute("data-toggle");
+attToggle.value = "modal";
+var attTarget = document.createAttribute("data-target");
+attTarget.value = "#pokemonModal";
+var attClick = document.createAttribute("onclick");
+attClick.value = "updateModal("+currentPokemon.pkdx_id+")";
 
     // Crear la tarjeta
     var card = document.createElement('div');
     card.className = "card text-center pokemon-card m-2";
+    card.setAttributeNode(attToggle);
+    card.setAttributeNode(attTarget);
+    card.setAttributeNode(attClick);
+    card.id = currentPokemon.pkdx_id;
 
     // Ubicar la tarjeta
     caja.appendChild(card);
@@ -106,8 +128,8 @@ function crearTarjeta(currentPokemon) {
     var imagen = document.createElement('img');
     imagen.className = "card-img-top p-5 pokemon-image";
     imagen.alt = currentPokemon.name; // reemplazar
-    imagen.style.maxWidth = "230px";
-    imagen.style.maxHeight = "230px";
+    imagen.style.width = "230px";
+    imagen.style.height = "230px";
     imagen.src = currentPokemon.art_url; // reemplazar
     card.appendChild(imagen);
 
@@ -203,11 +225,7 @@ function crearTarjeta(currentPokemon) {
 
         //Colorear imagen de fondo
         imagen.style.backgroundColor = typeColor1[1];
-        console.log(typeColor1);
-
     };
-
-
 
 };
 
@@ -229,4 +247,24 @@ function desaparece() {
 };
 
 
+//----------------------------------------------------------
+// Funcion que actualiza el modal
+//----------------------------------------------------------
+
+function updateModal(cardId) {
+    modalName.innerHTML = "#" + pokemon_data[cardId-1].pkdx_id + " " + pokemon_data[cardId-1].name;
+    modalImg.src = pokemon_data[cardId-1].art_url;
+    var color1 = mapThemColors(pokemon_data[cardId-1].types[0]);
+    modalType1.style.backgroundColor = color1[0];
+    modalType1.innerHTML = pokemon_data[cardId-1].types[0].charAt(0).toUpperCase() + pokemon_data[cardId-1].types[0].slice(1);
+    modalDescription.innerHTML = pokemon_data[cardId-1].description;
+
+    if(pokemon_data[cardId-1].types.length === 2) {
+        var color2 = mapThemColors(pokemon_data[cardId-1].types[1]);
+        modalType2.style.backgroundColor = color2[0];
+        modalType2.innerHTML = pokemon_data[cardId-1].types[1].charAt(0).toUpperCase() + pokemon_data[cardId-1].types[1].slice(1);
+    };
+};
+
+// Bye
 window.setTimeout(desaparece,3000);
