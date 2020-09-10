@@ -1,3 +1,4 @@
+var caja = document.getElementById('caja-de-tarjetas');
 //----------------------------------------------------------
 // Funcion que asocia los tipos de Pokemon con un color hex
 //----------------------------------------------------------
@@ -99,7 +100,6 @@ function crearTarjeta(currentPokemon) {
     card.className = "card text-center pokemon-card m-2";
 
     // Ubicar la tarjeta
-    var caja = document.getElementById('caja-de-tarjetas');
     caja.appendChild(card);
 
     //Imagen
@@ -117,12 +117,12 @@ function crearTarjeta(currentPokemon) {
 
     // Nombre
     var numerito = document.createElement('h6');
-    numerito.className = "card-title text-center mt-1 mb-1 pokemon-num py-1 px-2";
+    numerito.className = "card-title text-center mt-2 mb-2 pokemon-num px-2";
     numerito.innerHTML = "#"+currentPokemon.pkdx_id; //reemplazar
     cardBody.appendChild(numerito);
 
     var nombre = document.createElement('h6');
-    nombre.className = "card-title text-center mt-1 mb-1 pokemon-name py-1 px-2";
+    nombre.className = "card-title text-center mt-2 mb-2 pokemon-name px-3";
     nombre.innerHTML = currentPokemon.name; //reemplazar
     cardBody.appendChild(nombre);
 
@@ -220,3 +220,11 @@ function crearTarjeta(currentPokemon) {
 for (i = 0; i < pokemon_data.length; i++) {
     crearTarjeta(pokemon_data[i]);
 };
+
+function desaparece() {
+    var goaway = document.getElementById('pokeball');
+    goaway.style.display = "none";
+};
+
+
+window.setTimeout(desaparece,2000);
