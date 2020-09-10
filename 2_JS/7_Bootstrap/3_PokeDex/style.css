@@ -1,4 +1,4 @@
-/* LOADING ANIMATION CSSE */
+/* LOADING ANIMATION CSS */
 
 .loadingScreen1 {
     width: 50vw;
@@ -9,7 +9,7 @@
     border-right: solid 4px rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     animation-name: loadHideContentLeft;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -23,15 +23,12 @@
     border-left: solid 4px rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     animation-name: loadHideContentRight;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     
 }
-
-/* PokeBall */
-
-.loadingObject2 {
+.loadingObject2 { /* PokeBall */
     position: relative;
     height: 25px;
     width: 50px;
@@ -41,14 +38,13 @@
     z-index: 2;
     
 }
-.loadingObject1 {
+.loadingObject1 { /* PokeBall */
     height: 25px;
     width: 50px;
     background-color: white;
     border-radius: 0 0 50px 50px;
 }
-
-.loadingObject3 {
+.loadingObject3 { /* PokeBall */
     position: absolute;
     height: 12px;
     width: 12px;
@@ -69,31 +65,47 @@
     margin-top: -25px;
     z-index: 1000;
     animation-name: pokeBig;
-    animation-duration: 1.2s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     box-sizing: border-box;
 }
-
 @keyframes pokeBig {
     0% {
         transform: scale(1,1);
     }
-    25% {
+    10% {
         transform: scale(1.5,1.5);
     }
-    50% {
+    20% {
         transform: scale(1,1);
     }
-    75% {
+    30% {
         transform: scale(1.5,1.5);
+    }
+    40% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.5,1.5);
+    }
+    60% {
+        transform: scale(1,1);
+    }
+    70% {
+        transform: scale(1.5,1.5);
+    }
+    80% {
+        transform: scale(1,1);
+    }
+    90% {
+        transform: scale(0.5,0.5);
     }
     100% {
         transform: scale(0,0);
         
     }
 }
-
 @keyframes loadHideContentRight {
     0% {
         right: 0;
@@ -139,7 +151,7 @@
     }
 }
 
-/* CSS FOR ACTUAL PAGE */
+/* CSS ON ACTUAL PAGE */
 
 .tipo-pokemon {
     min-width: 90%;

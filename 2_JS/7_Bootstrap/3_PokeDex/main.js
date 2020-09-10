@@ -227,4 +227,4 @@ function desaparece() {
 };
 
 
-window.setTimeout(desaparece,2000);
+window.setTimeout(desaparece,3000);
