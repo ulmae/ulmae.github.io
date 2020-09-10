@@ -268,3 +268,11 @@ function updateModal(cardId) {
 
 // Bye
 window.setTimeout(desaparece,3000);
+
+// MATH STUFF
+
+/* function drawChart() {
+
+    var angulo0 =
+
+} */
