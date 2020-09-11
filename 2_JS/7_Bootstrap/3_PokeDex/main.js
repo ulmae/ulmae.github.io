@@ -8,6 +8,12 @@ var modalImg = document.getElementById('modal-img');
 var modalType1 = document.getElementById('type-modal-1');
 var modalType2 = document.getElementById('type-modal-2');
 var modalDescription = document.getElementById('description-modal');
+var tri1 = document.getElementById('tri1');
+var tri2 = document.getElementById('tri2');
+var tri3 = document.getElementById('tri3');
+var tri4 = document.getElementById('tri4');
+var tri5 = document.getElementById('tri5');
+var tri6 = document.getElementById('tri6');
 
 //----------------------------------------------------------
 // Funcion que asocia los tipos de Pokemon con un color hex
@@ -263,16 +269,34 @@ function updateModal(cardId) {
         var color2 = mapThemColors(pokemon_data[cardId-1].types[1]);
         modalType2.style.backgroundColor = color2[0];
         modalType2.innerHTML = pokemon_data[cardId-1].types[1].charAt(0).toUpperCase() + pokemon_data[cardId-1].types[1].slice(1);
-    };
+        modalType2.style.opacity = "1";
+    } else {
+        modalType2.style.backgroundColor = "black";
+        modalType2.style.opacity = "0.4";
+        modalType2.innerHTML = "-";
+    }
+
+    // Maths to generate my pseudo chart
+
+    tri1.style.transform = "rotate(30deg) scaleX("+
+    (pokemon_stats[cardId-1].base.HP*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base.HP*(1/255))+")";
+
+    tri2.style.transform = "rotate(90deg) scaleX("+
+    (pokemon_stats[cardId-1].base.Attack*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base.Attack*(1/255))+")";
+
+    tri3.style.transform = "rotate(150deg) scaleX("+
+    (pokemon_stats[cardId-1].base.Defense*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base.Defense*(1/255))+")";
+
+    tri4.style.transform = "rotate(210deg) scaleX("+
+    (pokemon_stats[cardId-1].base["Sp. Attack"]*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base["Sp. Attack"]*(1/255))+")";
+
+    tri5.style.transform = "rotate(270deg) scaleX("+
+    (pokemon_stats[cardId-1].base["Sp. Defense"]*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base["Sp. Defense"]*(1/255))+")";
+
+    tri6.style.transform = "rotate(330deg) scaleX("+
+    (pokemon_stats[cardId-1].base.Speed*(1/255))+") scaleY("+(pokemon_stats[cardId-1].base.Speed*(1/255))+")";
+    
 };
 
 // Bye
 window.setTimeout(desaparece,3000);
-
-// MATH STUFF
-
-/* function drawChart() {
-
-    var angulo0 =
-
-} */
