@@ -48,9 +48,7 @@ function longestCountry(paises) {
         if (i===0) {
             masLargoIndice = 0
         };
-        if (soloLetras[masLargoIndice].length>soloLetras[i+1].length) {
-            masLargoIndice = i;
-        } else {
+        if (soloLetras[masLargoIndice].length<soloLetras[i+1].length) {
             masLargoIndice = i+1;
         };
     };
