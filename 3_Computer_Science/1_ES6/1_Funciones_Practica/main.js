@@ -42,14 +42,19 @@ function longestCountry(paises) {
         soloLetras[i] = paises[i].split(" ").join("");
     };
     // Comparar el número de letras de cada país y retornar el mayor
-    var masLargo;
+    var masLargoIndice;
+    
     for (i=0; i<soloLetras.length-1; i++) {
-        if (soloLetras[i].length>soloLetras[i+1].length) {
-            masLargo = paises[i];
+        if (i===0) {
+            masLargoIndice = 0
+        };
+        if (soloLetras[masLargoIndice].length>soloLetras[i+1].length) {
+            masLargoIndice = i;
         } else {
-            masLargo = paises[i+1];
+            masLargoIndice = i+1;
         };
     };
+    var masLargo = paises[masLargoIndice];
     // Mostrar alerta del resultado que obtendria con el return
     alert(`Los paises ingresados fueron "${paises}". El país con mayor número de letras es: ${masLargo}`);
     // Dejar la salida en el log, para propósitos de evaluación
