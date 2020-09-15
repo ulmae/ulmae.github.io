@@ -1,0 +1,10 @@
+.step-by-step {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 4s steps(60, end); 
+  }
+  
+  @keyframes type{ 
+    from { width: 0; } 
+  } 
