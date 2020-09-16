@@ -1,0 +1,45 @@
+/*ROJO #e6594f
+CELESTE #4ebbe3
+VERDE #85e34e */
+.dim-banner {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 67vw;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.btn-tema {
+    background-color: #e6594f;
+    display: inline;
+    border: none;
+    font-size: 0.8rem;
+}
+.division {
+    height: 2px;
+    width: 10%;
+    background-color: #e6594f;
+}
+.top-text {
+    font-weight: bold;
+}
+.top-text2 {
+    font-weight: 10pt;
+}
+h2 {
+    font-size: 1.5rem;
+}
+.btn-width {
+    width: 170px;
+    height: 4rem;
+}
+.span-bolder {
+    font-weight: bolder;
+}
+.span-smaller {
+    font-size: 0.8em;
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color:  #e6594f;
+}
