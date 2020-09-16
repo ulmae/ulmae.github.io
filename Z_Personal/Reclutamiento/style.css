@@ -1,6 +1,9 @@
 /*ROJO #e6594f
 CELESTE #4ebbe3
 VERDE #85e34e */
+footer {
+    font-size: 0.7em;
+}
 .dim-banner {
     position: absolute;
     z-index: 2;
@@ -42,4 +45,11 @@ h3 {
     font-size: 1.2rem;
     font-weight: bolder;
     color:  #e6594f;
+}
+.icon-chart {
+    width: 64px;
+    height: 64px;
+}
+.career-chart {
+    height: 100%;
 }
