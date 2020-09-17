@@ -1,6 +1,54 @@
 /*ROJO #e6594f
 CELESTE #4ebbe3
 VERDE #85e34e */
+
+/* START Side bar para iconos sociales */
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+
+/* END Side bar para iconos sociales */
+
 footer {
     font-size: 0.7em;
 }
@@ -10,6 +58,14 @@ footer {
     width: 100%;
     height: 67vw;
     background-color: rgba(255, 255, 255, 0.7);
+    height: 100vh;
+}
+.imagen-banner{
+    width: 100%;
+}
+.top-banner {
+    height: 100vh;
+    overflow: hidden;
 }
 .btn-tema {
     background-color: #e6594f;
@@ -47,9 +103,141 @@ h3 {
     color:  #e6594f;
 }
 .icon-chart {
-    width: 64px;
-    height: 64px;
+    width: 70px;
+    height: 70px;
 }
 .career-chart {
     height: 100%;
 }
+.icon-chart-country {
+    width: 100px;
+    padding-top: 7.781px;
+    padding-bottom: 7.781px;
+}
+#proceso-de-aplicacion {
+    color: black;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+#polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 8px 0 rgba(0, 0, 0, 0.28);
+    border: white solid 4px;
+}
+.btn-square {
+    border-radius: 0px;
+    width: 100%;
+    text-align: left;
+    padding-right: 2em;
+    padding-left: 1em;
+}
+.squared {
+    width: 95%;
+}
+.background-arrow {
+    background-image: url(arrow.svg);
+    background-size: 1em 40%;
+    background-repeat: no-repeat;
+    background-position: 98% center;
+}
+.polaroid-menu {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09), 0 3px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.inside-card {
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 0.9em;
+}
+.link-rojo {
+    color: #e6594f;
+}
+.link-rojo:hover {
+    color: #4ebbe3;
+}
+.social-links-bottom {
+    display: none;
+}
+@media (max-width: 992px) {	
+	.icon-bar {
+        display: none;
+    }
+    .dim-banner {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 67vw;
+        background-color: rgba(255, 255, 255, 0.7);
+        height: 100vh;
+    }
+    .imagen-banner{
+        height: 100vh;
+        width: auto;
+    }
+    .top-banner {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        display: inline;
+      }
+      .fa:hover {
+          opacity: 0.7;
+      }
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+    .social-links-bottom {
+        display: inline;
+    }
+    .social-container {
+        text-align: center;
+        height: 5em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .btn-square {
+      font-size: 0.9em;
+    }
+    .dim-banner {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 67vw;
+        background-color: rgba(255, 255, 255, 0.7);
+        height: 100vh;
+    }
+    .imagen-banner{
+        height: 100vh;
+        width: auto;
+    }
+    .top-banner {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .icon-bar {
+        display: none;
+    }
+  }
