@@ -50,15 +50,41 @@ const request =  require('request');
     }
 }); */
 
-const getPokemonByName = (name) => {
+// FUNCION
+
+/* const getPokemonByName = (name) => {
     request(`https://pokeapi.co/api/v2/pokemon/${name}`, function (error, response, body) {
         if (response.statusCode === 200) {
             const json = JSON.parse(body);
-            console.log(json.abilities);
+            console.log(json.types);
         } else {
             console.log("Ocurrió un error en la petición...")
         }
     });
 }
 
-getPokemonByName("ralts");
+getPokemonByName("ralts"); */
+
+const getAuthorsByBookName = (bookName) => {
+    const URL_OPEN_LIBRARY = `http://openlibrary.org/search.json?q=${bookName}`;
+    request.get(URL_OPEN_LIBRARY, (err, response, body) => {
+        if (response.statusCode === 200) {
+            const json = JSON.parse(body);
+            // cosnole.log(json.docs[0]["author_name"][0]) -> otro estilo de sintaxis
+            // json.docs[0].author_name.forEach((author) => console.log(author));
+            const numberOfBooks = json.docs.length
+            console.log(`Se han encontrado ${numberOfBooks} libros:`)
+            json.docs.forEach(book => console.log(book.title_suggest))
+            /* TO DO:
+            Buscar qué es y cómo funciona
+                - map
+                - filter
+                - reduce
+            */
+        } else {
+            console.log("Hubo un error", response.statusCode);
+        }
+    })
+}
+
+getAuthorsByBookName("Lobo Estepario");
