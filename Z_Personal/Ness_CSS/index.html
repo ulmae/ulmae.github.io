@@ -1,29 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <style>
-        html, body, pre, code, kbd, samp {
+        html,
+        body,
+        pre,
+        code,
+        kbd,
+        samp {
             font-family: 'Press Start 2P', cursive;
         }
-      </style>
+    </style>
     <title>783CK</title>
+
+    <script>
+        let counter = 0;
+        function moveForward() {
+            switch (counter) {
+                case 0:
+                    document.getElementById("text").innerHTML = "Pero Feliz cumpleaños.";
+                    break;
+                case 1:
+                    document.getElementById("text").innerHTML = "Espero que independientemente de esto, siempre aceptes que te cocine algo un día de estos.";
+                    break;
+                case 2:
+                    document.getElementById("text").innerHTML = "Por cierto...";
+                    break;
+                case 3:
+                    document.getElementById("text").innerHTML = "Espera a terminar de leer el texto para dar click, lol, no tuve mucho tiempo para hacer esto.";
+                    break;
+                case 4:
+                    document.getElementById("text").innerHTML = "Simplemente, me está matando un poco por dentro preguntar, así que decidí que solo lo haría.";
+                    break;
+                case 5:
+                    document.getElementById("text").innerHTML = "Y esta fue la mejor manera que se me ocurrió.";
+                    break;
+                case 6:
+                    document.getElementById("text").innerHTML = "Overkill, siempre overkill, es el dilema de ser overthinker.";
+                    break;
+                case 7:
+                    document.getElementById("text").innerHTML = "He hablado con tanta gente en los últimos días para tratar de sacar estas cosas de mi mente. Me dieron consejos.";
+                    break;
+                case 8:
+                    document.getElementById("text").innerHTML = "E incluso traté de dejarle la decisión al destino y decir 'si Joshua viene temprano, le diré'";
+                    break;
+                case 9:
+                    document.getElementById("text").innerHTML = "Pero nada funciona, y yo sé porqué no funciona bien.";
+                    break;
+                case 10:
+                    document.getElementById("text").innerHTML = "Es porque, por dentro, ya sé lo que quiero, y no puedo cambiarlo.";
+                    break;
+                case 11:
+                    document.getElementById("text").innerHTML = "Y también sé mis limitantes... Las cosas que no quiero hacer.";
+                    break;
+                case 12:
+                    document.getElementById("text").innerHTML = "No quiero escribirte aquí como si fueras un extraño, porque puede dar la impresión errónea.";
+                    break;
+                case 13:
+                    document.getElementById("text").innerHTML = "No quiero ser sutil, jugar al gato y al ratón. También puede dar la impresión errónea.";
+                    break;
+                case 14:
+                    document.getElementById("text").innerHTML = "Prefiero ser clara. ";
+                    break;
+                case 15:
+                    document.getElementById("text").innerHTML = "Prefiero poner en juego demasiado antes que poner en juego algo insuficiente.";
+                    break;
+                case 16:
+                    document.getElementById("text").innerHTML = "Cuando voy al súper siempre termino comprando demasiado.";
+                    break;
+                case 17:
+                    document.getElementById("text").innerHTML = "Cuando salgo a caminar y no estás, siempre paso frente a tu casa.";
+                    break;
+                case 18:
+                    document.getElementById("text").innerHTML = "Cuando salgo a caminar y sé que vas a andar corriendo, evito las calles en las que creo que vas a andar.";
+                    break;
+                case 19:
+                    document.getElementById("text").innerHTML = "Siempre he pensado que camino gracioso y no me gusta que la gente me vea.";
+                    break;
+                case 20:
+                    document.getElementById("text").innerHTML = "Volví a abrir esta app solo porque me mencionaste que la usabas, y tenía curiosidad. Pero siempre que me sale tu perfil, cerraba la app...";
+                    break;
+                case 21:
+                    document.getElementById("text").innerHTML = "Y casi que desde que me mudé vengo haciendo planes en mi mente para imaginarme que podría cocinar para tu cumpleaños.";
+                    break;
+                case 22:
+                    document.getElementById("text").innerHTML = "Cuando le das like a algo que publico o comentas algo sobre ello, me pongo a sonreír como idiota frente al teléfono.";
+                    break;
+                case 23:
+                    document.getElementById("text").innerHTML = "Y eso me hace sentir que ya perdí, y por mucho.";
+                    break;
+                case 24:
+                    document.getElementById("text").innerHTML = "Es molesto cuando me gusta una persona como tú, porque se siente como que tú vives en un mundo diferente al mío.";
+                    break;
+                case 25:
+                    document.getElementById("text").innerHTML = "Y siento la curiosidad de querer ser un poco más parte de tu mundo, y ver todas las facetas de ti que no he conocido aún.";
+                    break;
+                case 26:
+                    document.getElementById("text").innerHTML = "Y a la vez la frustración de que no puedo ser parte de la mayoría de cosas sin pedir ayuda o pedir permiso.";
+                    break;
+                case 27:
+                    document.getElementById("text").innerHTML = "Me alegra mucho que seamos vecinos y que pude conocer al menos algunas de esas facetas... Conocerte un poco más.";
+                    break;
+                case 28:
+                    document.getElementById("text").innerHTML = "Y solo hago esto porque si no, no voy a poder pensar en nada más durante varios días más.";
+                    break;
+                case 29:
+                    document.getElementById("text").innerHTML = "Igual, jajaja, somos adultos, así que no hay presión. Aún si esto es overkill, solo es así porque no podría ni verte a los ojos ahorita, mucho menos decir algo.";
+                    break;
+                case 30:
+                    document.getElementById("text").innerHTML = "Pero quería saber si...";
+                    break;
+                case 31:
+                    document.getElementById("text").innerHTML = "Si te dijera que quiero considerar lo de tu cumpleaños una 'cita', ¿Qué pensarías?";
+                    break;
+                case 32:
+                    document.getElementById("text").innerHTML = "(No puedo poner una opción de responder aquí ahorita, así que este es el *fin* :p)";
+                    break;
+            }
+            counter = counter + 1
+        }
+    </script>
 </head>
+
 <body style="background-color: slategray;">
-    <main class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <main class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;"
+        onclick="moveForward()">
         <div class="container-fluid" style="background-color: #212529; height: 15em; width: 100%;">
         </div>
         <div class="nes-container with-title is-dark">
-            <p class="title">Strange text box</p>
-            <p class="step-by-step">This evening is not quite pleasant. The air is humid, and the dogs are barking.</p>
+            <p class="title">Ventana rara</p>
+            <p id="text" class="step-by-step">Quizás sea un poco temprano para decirlo.</p>
         </div>
     </main>
-    
+
 
 </body>
+
 </html>
