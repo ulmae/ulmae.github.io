@@ -25,11 +25,13 @@ function activateSwitch() {
     if (lightsOn === true) {
         lightbulb.style.backgroundColor = currentColor;
         lightbulb.style.boxShadow = `0px 0px 100px ${currentColor}`;
+        lightbulb.style.borderColor = "#FFFFFF";
         button.innerText = "Switch Off"
         
     } else {
         lightbulb.style.backgroundColor = '#000000';
         lightbulb.style.boxShadow = `0px 0px 100px #000000`;
+        lightbulb.style.borderColor = "#808080";
         button.innerText = "Switch On"
     }
 }
