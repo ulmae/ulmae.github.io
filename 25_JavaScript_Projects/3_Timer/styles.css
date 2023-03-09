@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=VT323&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: lightslategray;
+}
+
+.display {
+    font-family: 'VT323', monospace;
+    font-weight: 700;
+    font-size: 150px;
+    text-align: right;
+    background-color: #000;
+    color: greenyellow;
+}
+
+.display::placeholder {
+    color: green;
+}
+
+.display::-webkit-outer-spin-button,
+.display::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 20px 90px;
+    margin: 5px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: solid 8px #000;
+    border-width: 0 6px 8px 0;
+    border-radius: 10px;
+    border-color: transparent #ddd #999 transparent;
+    background-clip: padding-box;
+
+}
+button:active{
+    border-width: 0 2px 3px 0; 
+    margin-right: 10px;
+    position: relative;
+    left: 2px;
+    top: 3px;
+  }
