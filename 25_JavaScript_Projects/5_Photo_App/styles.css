@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Courgette&display=swap');
+html,body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+}
+.home {
+    padding: 15px;
+    font-family: 'Courgette',sans-serif;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    border-bottom: solid #151515 1px;
+}
+#feed{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    font-size: 14px;
+    font-family: 'Montserrat',sans-serif;
+    border-bottom: solid #151515 1px;
+}
+.picture{
+    width: 100%;
+    border-radius: 3px;
+}
+.fullname {
+    padding: 10px;
+}
+.content {
+    padding: 0 15px;
+    color: white;
+}
+.like {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    width: 28px;
+}
+.sides {
+    width: 100%;
+    background-color: black;
+}
+
+@media only screen and (min-width: 470px) {
+    #feed{
+        width: 468px;
+        display: block;
+        margin: 0 auto;
+    }
+  }
