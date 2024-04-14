@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="globals.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Página de Inicio</title>
+  <html lang="en">
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="mt-2">
+    <section class="container-fluid bg-light py-2">
+      <div class="container mt-3">
+        <img src="iconogoogle.png" class="rounded" alt="Cinque Terre" width="304" height="75">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 px-2 pt-4 pb-5">
+            <h1 class="text-primary lh-md pb-2">Como se conectan, crean y colaboran equipos de todos los tamaños</h1>
+            <p class="mt-2">Una solución innovadora y flexible que permite que las personas y las organizaciones
+              alcancen más objetivos.
+            </p>
+            <p class="mb-3">Herramientas de productividad y colaboración para todas las formas de trabajo.</p>
+            <button type="button" class="btn btn-secondary">Comienza ahora</button>
+          </div>
+          <div class="col-md-6">
+            <img src="collab.png" alt="Colaboracion" class="img-fluid">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="container-fluid">
+      <div class="mx-auto container py-5">
+        <h2>Herramientas de productividad y colaboración para todas las formas de trabajo.</h2>
+        <div class="row py-4 align-items-center">
+          <div class="col-lg-6">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/HT4ehzXV6uk?si=sXEfgrbbhOd8WIio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 py-4">
+            Con Google Workspace, recibirá una cantidad de servicios empresariales adicionales que no están incluidos
+            en las aplicaciones de consumo gratuitas de Google. Estos servicios comprenden correo electrónico
+            empresarial personalizado (@suempresa), el doble de espacio de almacenamiento en la nube en Gmail y Drive,
+            asistencia ininterrumpida por teléfono y correo electrónico, garantía de tiempo de actividad en correo
+            electrónico empresarial del 99.9%, interoperabilidad con Microsoft Outlook, opciones de seguridad
+            adicionales (como autenticación en dos pasos y SSO), y controles administrativos para cuentas de usuario.
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+    <section class="container-fluid bg-light text-center py-5">
+      <h1 class="pb-4 text-dark">Demuéstreles a todos cómo se hace</h1>
+      <a href="./contacto/formulario.html"><button type="button" class="btn btn-secondary">Comience ahora</button></a>
+      
+    </section>
+  </main>
+
+
+
+  <div id="footer-placeholder"></div>
+  <!--El contenido del sitio va antes de este comentario-->
+  <script>
+    $(function () {
+      $("#navbar-placeholder").load("../navbar/navbar.html");
+    });
+    $(function () {
+      $("#footer-placeholder").load("../footer/footer.html");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

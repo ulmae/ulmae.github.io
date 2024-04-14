@@ -1,0 +1,8 @@
+.leading-custom {
+    line-height: 1.4em;
+}
+
+.video-youtube{
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}

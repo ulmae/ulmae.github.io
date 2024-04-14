@@ -1,0 +1,43 @@
+body {
+	margin:0;
+	width: 100%;
+}
+h2, button{
+	text-align: center;
+}
+
+.h2-left{
+	text-align: left;
+	max-width: 450px;
+	line-height: 2em;
+}
+
+p,li,td{
+	font-size: 18px;
+}
+#i { background-color: #EBF6FF; }
+
+h1{ color:black; }
+
+li {
+	padding: 0.5em 0px;
+	font-size: 1em;
+}
+
+.tabla-grande {
+	display: block;
+}
+
+.tabla-peq {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.tabla-grande {
+		display: none;
+	}
+	.tabla-peq{
+		display: block;
+	}
+  }

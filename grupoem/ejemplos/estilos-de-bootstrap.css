@@ -1,0 +1,14 @@
+body {
+    padding:2rem;
+}
+h1{
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: solid 2px black;
+}
+.square-test{
+    width: 4rem;
+    height: 4rem;
+    background-color:lightgray;
+}

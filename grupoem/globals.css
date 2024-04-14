@@ -1,0 +1,26 @@
+@import url(bootstrap/css/bootstrap.css);
+
+:root {
+
+  --bs-primary: #b24e44;
+  --bs-secondary: #3aaa59;
+  --bs-success: #69ba04;
+  --bs-info: #fabe0e;
+  --bs-warning: #ffc782;
+  --bs-danger: #fc016a;
+  --bs-light: #faefe1;
+  --bs-dark: #020c45;
+  --bs-primary-rgb: 178,78,68;
+  --bs-secondary-rgb: 58,170,89;
+  --bs-success-rgb: 105,186,4;
+  --bs-info-rgb: 250,190,14;
+  --bs-warning-rgb: 255,199,130;
+  --bs-danger-rgb: 252,1,106;
+  --bs-light-rgb: 250,239,225;
+  --bs-dark-rgb: 2,12,69;
+
+}
+
+h1 {
+  color: var(--bs-primary);
+}
