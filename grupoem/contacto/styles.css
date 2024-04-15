@@ -1,0 +1,21 @@
+.parrafo {
+    text-align: justify;
+    max-width: 850px;
+   
+}
+
+.contact{
+text-align: justify;
+
+}
+.body{
+background-color: #FDF5ED;
+color: #1A231E;
+
+}
+.lis{
+text-align: left;
+list-style-type: none;
+max-width: 950px;
+}
+.imagen{height: 300px; width: 100%; object-fit: cover;}

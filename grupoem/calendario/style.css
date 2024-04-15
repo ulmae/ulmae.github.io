@@ -1,0 +1,51 @@
+.button-row {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.btn-outline-light {
+  color: antiquewhite;
+  border-color: antiquewhite;
+}
+
+.btn:hover{
+
+    transition : 2000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #ff5466;
+    color: #000000;
+    border: solid 2px #000000;
+    }
+
+    .text-bold {
+        font-family: 'Roboto', sans-serif; 
+        font-weight: bold;
+      }
+      
+      .text-center {
+        text-align: center;
+        color: bisque;
+      }
+      
+      .mt-4 {
+        margin-top: 1.5rem;
+      }
+
+      /* Container styling */
+
+  .back {background-color:#425B4Eff }
+
+.card-body{
+background-color: #ff5466;
+}
+  
+.card-body h5 {
+    text-align: start
+  }
+  
+.card-body h6 {
+    text-align: end;
+  }
+  
+  

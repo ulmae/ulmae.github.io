@@ -2,22 +2,22 @@
 
 :root {
 
-  --bs-primary: #b24e44;
-  --bs-secondary: #3aaa59;
+  --bs-primary: #425B4Eff;
+  --bs-secondary: #FF5466ff;
   --bs-success: #69ba04;
   --bs-info: #fabe0e;
   --bs-warning: #ffc782;
   --bs-danger: #fc016a;
-  --bs-light: #faefe1;
-  --bs-dark: #020c45;
-  --bs-primary-rgb: 178,78,68;
-  --bs-secondary-rgb: 58,170,89;
+  --bs-light: #F9DFC5ff;
+  --bs-dark: #0B1217ff;
+  --bs-primary-rgb: 66,91,78;
+  --bs-secondary-rgb: 255,84,102;
   --bs-success-rgb: 105,186,4;
   --bs-info-rgb: 250,190,14;
   --bs-warning-rgb: 255,199,130;
   --bs-danger-rgb: 252,1,106;
-  --bs-light-rgb: 250,239,225;
-  --bs-dark-rgb: 2,12,69;
+  --bs-light-rgb: 249,223,197;
+  --bs-dark-rgb: 11,18,23;
 
 }
 

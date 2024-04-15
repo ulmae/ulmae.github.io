@@ -1,0 +1,25 @@
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #34463C;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        img {
+            
+            height: auto;
+            height: 500px; 
+            width: 50%;
+        }
+p ,li {
+    text-align: justify;
+            max-width: 650px; /* ajustar la letra en el ancho de la pantalla*/
+}
